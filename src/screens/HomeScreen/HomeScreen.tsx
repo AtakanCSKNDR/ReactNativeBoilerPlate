@@ -9,8 +9,7 @@ const HomeScreen = () => {
   }
   return (
     <View>
-      <Text>HomeScreen</Text>
-   
+      
       <TouchableOpacity onPress={handleOpen}>
         <Text>Open Drawer</Text>
       </TouchableOpacity>
