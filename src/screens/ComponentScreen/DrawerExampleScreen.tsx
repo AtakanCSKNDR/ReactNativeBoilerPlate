@@ -20,6 +20,7 @@ const DrawerExampleScreen = () => {
   return (
     <ScrollView>
       <BPButton title="Open Drawer" onPress={handleOpen} color="#238636" />
+      <View style={{marginVertical:6}}></View>
       <BPText
         type="body"
         text="Drawer bileşeni, sayfa içerisinde bir bottom drawer açarak aktif pencereden ayrılmadan bileşenlerinizi render etmenizi sağlar."

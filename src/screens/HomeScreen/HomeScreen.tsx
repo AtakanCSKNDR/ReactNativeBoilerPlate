@@ -1,21 +1,15 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/Octicons';
+
 import BPText from '../../core/atomic/atoms/BPText';
 
+import ItemList from '../../core/atomic/organisms/ItemList';
+
 const HomeScreen = () => {
-  const navigation: any = useNavigation();
-  const handleOpen = () => {
-    navigation.navigate('BottomDrawerScreen', {
-      title: 'Test',
-      subtitle: 'Test Subtitle',
-      children: <Text>Lorem Ipsum Dolor Sit Amet</Text>,
-    });
-  };
   return (
     <View style={styles.container}>
-      <BPText type="title" text="Anasayfa"/>
+      <BPText type="title" text="Anasayfa" />
+      <ItemList></ItemList>
     </View>
   );
 };
