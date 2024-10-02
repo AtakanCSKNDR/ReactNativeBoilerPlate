@@ -1,23 +1,24 @@
-import { StyleSheet, Text, ScrollView } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, ScrollView, View} from 'react-native';
+import React from 'react';
+import BPText from './BPText';
 
-const CodeBlock = ({ children }: any) => {
+const CodeBlock = ({text}: any) => {
   return (
     <ScrollView horizontal={true} style={styles.scrollView}>
-      <Text style={styles.codeBlock}>
-        {children}
-      </Text>
+      <View style={styles.codeBlock}>
+        <BPText text={text} type="label" />
+      </View>
     </ScrollView>
-  )
-}
+  );
+};
 
-export default CodeBlock
+export default CodeBlock;
 
 const styles = StyleSheet.create({
   scrollView: {
     maxHeight: 150,
-    marginBottom:8,
-    width:"100%"
+    marginBottom: 8,
+    width: '100%',
   },
   codeBlock: {
     backgroundColor: '#eaeaea',
@@ -26,6 +27,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     flexWrap: 'nowrap',
     minWidth: '100%',
-    flex:1,
+    flex: 1,
   },
-})
+});

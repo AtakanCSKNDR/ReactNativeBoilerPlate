@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     borderWidth: 0.8,
     borderColor: '#f0f0f0',
     backgroundColor:"#FFF",
-    elevation:1,
-    marginBottom:4
+    elevation:2,
+    marginBottom:8
   },
   accordionButton: {
     padding: 16,

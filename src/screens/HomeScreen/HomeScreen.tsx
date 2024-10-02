@@ -1,14 +1,12 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-
 import BPText from '../../core/atomic/atoms/BPText';
-
 import ItemList from '../../core/atomic/organisms/ItemList';
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <BPText type="title" text="Anasayfa" />
+      <BPText type="header" text="Anasayfa" />
       <ItemList></ItemList>
     </View>
   );
