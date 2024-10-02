@@ -1,79 +1,70 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Boilerplate
+Bu boilerplate projesi, React Native ile hızlı bir başlangıç yapmanızı sağlar. Atomic Design prensiplerine göre düzenlenmiş bir klasör yapısı, i18n(localization) , Axios ile HTTP istekleri ve Context API ile state yönetimi içerir. Ayrıca, Stack ve Tab navigasyonları da dahil edilmiştir. 
+##### DONT REPEAT YOURSELF!
+## Başlarken
+React Native Boilerplate, Node.js ve React Native CLI gerektirir.
+### Gereksinimler:
+* Node.js (v14+)
+* React Native CLI
+* Android Studio veya Xcode
+### Kurulum Adımları
+1- Proje dizinine gidin ve bağımlılıkları yükleyin:
+ ````sh
+$ cd ReactNativeBoilerplate
+$ npm install
+````
+2- Projeyi geliştirme ortamında çalıştırın:
+ ````sh
+$ npx react-native run-android  # Android için
+$ npx react-native run-ios      # iOS için
+````
+### Üretim için Derleme
+Projeyi üretim, staging veya test ortamlarında çalıştırmak için aşağıdaki komutları kullanabilirsiniz:
+ ````sh
+$ npx react-native run-android  # Android için
+$ npx react-native run-ios      # iOS için
+````
+### İçerikler
+React Native Boilerplate, aşağıdaki açık kaynak projeleri kullanır:
 
-# Getting Started
+* React Native - Mobil uygulama geliştirme için framework.
+* React Navigation - Stack ve Tab navigasyonlarını içeren güçlü bir navigasyon kütüphanesi.
+* i18next - Uluslararasılaştırma ve lokalizasyon için güçlü bir kütüphane.
+* Axios - HTTP istekleri için popüler bir kütüphane.
+* Context API - Uygulama genelinde state yönetimi için kullanılan yapı.
+* Atomic Design - Bileşenleri daha iyi yönetmek için kullanılan bir tasarım prensibi.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### Ekran Görüntüleri
+Bu boilerplate, basit ve kullanıcı dostu bir arayüzle gelir. Aşağıda proje içindeki bazı örnek ekran görüntülerini görebilirsiniz:
 
-## Step 1: Start the Metro Server
+## Dokümantasyon
+### Mimarisi
+Proje klasör yapısı şu şekildedir:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+* **Assets** - Uygulama içerisindeki resimler, fontlar ve stil dosyalarının tutulduğu klasör.
+* **Core** - Uygulamanın temel yapı taşlarını içeren klasör.
+  - **atomic** - Atomic Design prensibine göre bileşenleri yapılandıran klasör.
+    - **atoms** - En küçük, tekil ve bağımsız bileşenler (butonlar, metin alanları vb.).
+    - **molecules** - Birden fazla atomun birleşimiyle oluşan bileşenler (form alanları, liste öğeleri vb.).
+    - **organisms** - Daha karmaşık bileşenler, birden fazla atom ve molekül içerir (kart yapıları, navigasyon menüleri vb.).
+    - **templates** - Sayfa düzenlerini içeren bileşenler, bileşenlerin bir araya getirilip düzenlendiği yapı.
+  - **constants** - Proje genelinde kullanılan sabit değerler (örneğin API endpoint'leri, sabit değişkenler vb.).
+  - **interceptors** - Axios gibi HTTP istekleri için kullanılan interceptor'lar ve istek yönetimi.
+  - **localization** - Uygulamanın çok dilli yapısını yöneten, dil dosyalarının tutulduğu klasör.
+  - **models** - Uygulamanın veri modelleri ve tip tanımlamaları (örneğin TypeScript arayüzleri veya sınıflar).
+  - **utils** - Yardımcı fonksiyonlar ve araçların bulunduğu klasör (örneğin form validasyonu, tarih formatlama vb.).
+* **Navigation** - React Navigation kullanarak sayfa yönlendirmelerini yöneten yapı.
+* **Screens** - Uygulama içerisinde yer alan ekranlar (sayfalar) burada tanımlanır.
+* **Stores** - Context API ile global state yönetimini sağlayan yapı, uygulamanın durumunu yönetir.
 
-```bash
-# using npm
-npm start
+### Navigasyon Yapısı
+Projede hem Stack hem de Tab navigasyonları bulunmaktadır. React Navigation kütüphanesiyle oluşturulan bu yapı, sayfalar arası geçişleri kolaylaştırır.
 
-# OR using Yarn
-yarn start
-```
+### Stack Navigasyon
+### Tab Navigasyon
 
-## Step 2: Start your Application
+### State Yönetimi(Context API)
+### Axios ve HTTP Interceptor
+### Çok Dillilik (Localization)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

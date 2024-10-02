@@ -1,23 +1,22 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-import { useNavigation } from '@react-navigation/native'
+import {StyleSheet, View} from 'react-native';
+import React from 'react';
+import BPText from '../../core/atomic/atoms/BPText';
+import ItemList from '../../core/atomic/organisms/ItemList';
 
 const HomeScreen = () => {
-  const navigation:any  = useNavigation()
-  const handleOpen = () => { 
-    navigation.navigate("BottomDrawerScreen" , {title:"Test" , subtitle:"Test Subtitle" , children:<Text>Lorem Ipsum Dolor Sit Amet</Text>})
-  }
   return (
-    <View>
-      <Text>HomeScreen</Text>
-   
-      <TouchableOpacity onPress={handleOpen}>
-        <Text>Open Drawer</Text>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <BPText type="header" text="Anasayfa" />
+      <ItemList></ItemList>
     </View>
-  )
-}
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    flex: 1,
+  },
+});
